@@ -1,11 +1,10 @@
 package com.epam.mjc.stage0;
 
 public class Animal {
-    private String color;
-    private int numberOfPaws;
-    private boolean hasFur;
+    private final String color;
+    private final int numberOfPaws;
+    private final boolean hasFur;
 
-    Animal() {}
     Animal(String c, int n, boolean h) {
         color = c;
         numberOfPaws = n;
