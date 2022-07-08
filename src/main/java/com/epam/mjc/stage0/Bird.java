@@ -3,12 +3,10 @@ package com.epam.mjc.stage0;
 import java.awt.*;
 
 public class Bird extends Animal {
-    Bird(){
-        super();
-      String  Color="blue";
-      int numberOfPaws=2;
-      boolean hasFur=false;
-    };
+    Bird() {
+        super("blue",2,false);
+    }
+
     @Override
     public void getDescription() {
         super.getDescription();

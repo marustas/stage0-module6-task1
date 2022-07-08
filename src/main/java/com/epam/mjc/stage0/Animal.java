@@ -4,14 +4,11 @@ public class Animal {
     private String color;
     private int numberOfPaws;
     private boolean hasFur;
-
+    public Animal() {}
     public Animal(String color, int numberOfPaws, boolean hasFur) {
         this.color = color;
         this.numberOfPaws = numberOfPaws;
         this.hasFur = hasFur;
-    }
-
-    public Animal() {
     }
 
     public void getDescription() {
@@ -20,7 +17,6 @@ public class Animal {
             System.out.print("It has" + (numberOfPaws) + "paws");
         } else if (numberOfPaws == 1) {
             System.out.print("It has" + (numberOfPaws) + "paw");
-
         }
         if (hasFur) {
             System.out.print("and a fur.");
