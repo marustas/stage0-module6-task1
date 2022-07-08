@@ -5,22 +5,24 @@ public class Animal {
     private int numberOfPaws;
     private boolean hasFur;
 
-    Animal(String color, int numberOfPaws, boolean hasFur) {
+    public Animal(String color, int numberOfPaws, boolean hasFur) {
         this.color = color;
         this.numberOfPaws = numberOfPaws;
         this.hasFur = hasFur;
     }
-    public void getDescription() {
-        System.out.print("This animal is mostly " + color + ".");
-        if (numberOfPaws > 0 && numberOfPaws > 1) {
-            System.out.print(" It has " + (numberOfPaws) + " paws ");
-        } else if (numberOfPaws == 1) {
-            System.out.print(" It has " + (numberOfPaws) + " paw ");
-        }
-        if (hasFur) {
-            System.out.print("and a fur.");
+
+    public Animal() {
+    }
+
+    public String getDescription() {
+        if (numberOfPaws > 0 && numberOfPaws > 1 && hasFur) {
+            return ("This animal is mostly " + color + ". It has " + (numberOfPaws) + " paws and a fur.");
+        } else if (numberOfPaws == 1 && hasFur) {
+            return ("This animal is mostly " + color + ". It has " + (numberOfPaws) + " paw and a fur.");
+        } else if (numberOfPaws > 0 && numberOfPaws > 1 && !hasFur) {
+            return ("This animal is mostly " + color + ". It has " + (numberOfPaws) + " paws and no fur.");
         } else {
-            System.out.print("and no fur.");
+            return ("This animal is mostly " + color + ". It has " + (numberOfPaws) + " paw and no fur.");
         }
     }
 }
