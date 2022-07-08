@@ -4,13 +4,13 @@ public class Animal {
     private String color;
     private int numberOfPaws;
     private boolean hasFur;
-    public Animal() {}
-    public Animal(String color, int numberOfPaws, boolean hasFur) {
-        this.color = color;
-        this.numberOfPaws = numberOfPaws;
-        this.hasFur = hasFur;
-    }
 
+    Animal() {}
+    Animal(String c, int n, boolean h) {
+        color = c;
+        numberOfPaws = n;
+        hasFur = h;
+    }
     public void getDescription() {
         System.out.print("This animal is mostly" + color + ".");
         if (numberOfPaws > 0 && numberOfPaws > 1) {
