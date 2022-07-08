@@ -1,5 +1,17 @@
 package com.epam.mjc.stage0;
 
-public class Bird {
+import java.awt.*;
 
+public class Bird extends Animal {
+    Bird(){
+        super();
+      String  Color="blue";
+      int numberOfPaws=2;
+      boolean hasFur=false;
+    };
+    @Override
+    public void getDescription() {
+        super.getDescription();
+        System.out.print("Moreover, it has 2 wings and can fly.");
+    }
 }
